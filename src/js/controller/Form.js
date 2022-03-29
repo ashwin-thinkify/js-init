@@ -1,4 +1,5 @@
 import selectors from "../constants/selectors";
+import html from '../../htmls/main.html';
 
 function load(url, element) {
   fetch(url).then((res) => {
@@ -12,7 +13,8 @@ export default class Form {
   }
 
   init() {
-    console.log("Testing...", this.id);
-    // load("../../htmls/main.html", document.querySelector(selectors.ID.MAIN));
+    console.log("Testing...", this.id, html);
+    document.querySelector(selectors.ID.MAIN).innerHTML = html;
+    // load("../../htmls/main.html", );
   }
 }
